@@ -1,4 +1,4 @@
-export default function FocusLesson() {
+export default function Focus() {
   return (
     <main>
       <h1>🧠 How to Focus Deeply</h1>
@@ -8,8 +8,9 @@ export default function FocusLesson() {
         3. Train your mind like a muscle – start small, grow daily<br />
         4. Focus on one meaningful task at a time<br />
         5. Use music, quiet, or white noise to stay zoned in<br />
+        <br />
+        Practice focus daily and your life will change.
       </p>
-      <p>Practice focus daily and your life will change.</p>
     </main>
-  );
+  )
 }
