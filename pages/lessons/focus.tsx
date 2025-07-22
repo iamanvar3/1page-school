@@ -12,5 +12,5 @@ export default function Focus() {
         Practice focus daily and your life will change.
       </p>
     </main>
-  )
+  );
 }
