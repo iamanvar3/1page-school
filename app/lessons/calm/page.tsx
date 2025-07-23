@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import React from 'react';
 
 export default function CalmLesson() {
   return (
@@ -24,4 +27,15 @@ export default function CalmLesson() {
             </Link>
           </li>
           <li>
-            <Link href="/lessons/think"
+            <Link href="/lessons/think" className="text-blue-600 hover:underline">
+              💡 Think for Yourself
+            </Link>
+          </li>
+        </ul>
+        <p className="mt-4">
+          <Link href="/" className="text-gray-600 hover:underline">← Back to Home</Link>
+        </p>
+      </div>
+    </main>
+  );
+}
