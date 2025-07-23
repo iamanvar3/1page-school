@@ -1,4 +1,4 @@
-export default function Home() { 
+export default function Home() {
   return (
     <main className="max-w-2xl mx-auto">
       <h1 className="text-4xl font-bold mb-4">📘 1-Page School</h1>
