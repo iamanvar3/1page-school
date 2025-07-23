@@ -19,6 +19,11 @@ export default function Home() {
             ⏳ Manage Your Time
           </a>
         </li>
+        <li>
+          <a href="/lessons/think" className="text-blue-600 hover:underline">
+            💡 Think for Yourself
+          </a>
+        </li>
       </ul>
     </main>
   );
