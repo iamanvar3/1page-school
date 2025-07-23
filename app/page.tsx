@@ -1,6 +1,8 @@
+import React from "react";
+
 export default function HomePage() {
   return (
-    <main className="max-w-2xl mx-auto space-y-12">
+    <main className="max-w-2xl mx-auto space-y-12 p-6">
       <section>
         <h1 className="text-4xl font-bold mb-4">⏳ Manage Your Time</h1>
         <p className="mb-6">Spend it on what truly matters.</p>
