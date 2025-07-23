@@ -1,21 +1,16 @@
 export default function FocusPage() {
   return (
-    <main className="max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">🧠 How to Focus Deeply</h1>
-      <p className="mb-4">
-        In a noisy world, your attention is your superpower. Here's how to sharpen it:
-      </p>
-      <ul className="list-disc pl-5 space-y-2">
-        <li>🚫 Remove distractions: Silence your phone, close tabs, and create a calm space.</li>
-        <li>⏱ Use timed focus: Work in 25-minute blocks (Pomodoro), then rest for 5. Repeat.</li>
-        <li>💪 Train your focus: Start small. Focus for 10 minutes, then 20. Build your stamina daily.</li>
-        <li>🎯 One task at a time: Multitasking is a lie. Choose what matters, and give it your full mind.</li>
-        <li>🌿 Control your environment: Use silence or nature sounds to help your mind stay focused.</li>
+    <main className="p-6 max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">🧠 How to Focus Deeply</h1>
+      <ul className="list-disc ml-6 space-y-2">
+        <li>🔕 Silence distractions: turn off notifications, find a quiet place.</li>
+        <li>🎯 Set a clear goal before starting any session.</li>
+        <li>⏲️ Use the timer method: 25–45 minutes of work, 5–10 minute breaks.</li>
+        <li>🍃 Choose silence or nature sounds over lyrics or noise.</li>
+        <li>🧠 When your mind wanders, gently bring it back. That’s the practice.</li>
+        <li>📴 Go offline if possible. Depth comes from disconnection.</li>
+        <li>💡 Deep work builds deep understanding. Prioritize it.</li>
       </ul>
-      <p className="mt-4">Focus is a skill. Build it, and you’ll change your life.</p>
-      <p className="mt-6">
-        <a href="/" className="text-blue-600 hover:underline">← Back to Home</a>
-      </p>
     </main>
   );
 }
