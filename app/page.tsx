@@ -8,6 +8,7 @@ export default function HomePage() {
         <li><Link href="/lessons/focus" className="text-blue-600 hover:underline">🧠 How to Focus Deeply</Link></li>
         <li><Link href="/lessons/time" className="text-blue-600 hover:underline">⏳ Manage Your Time</Link></li>
         <li><Link href="/lessons/think" className="text-blue-600 hover:underline">💡 Think for Yourself</Link></li>
+        <li><Link href="/lessons/calm" className="text-blue-600 hover:underline">✨ How to Stay Calm Under Pressure</Link></li>
       </ul>
     </main>
   );
