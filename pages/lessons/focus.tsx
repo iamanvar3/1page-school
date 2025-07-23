@@ -19,7 +19,7 @@ export default function Focus() {
           <strong>🎯 One task at a time:</strong> Multitasking is a lie. Choose what matters, and give it your full mind.
         </li>
         <li>
-          <strong>🎧 Control your environment:</strong> Use music, quiet, or white noise to stay locked in.
+          <strong>🎧 Control your environment:</strong> quiet, or white noise to stay locked in.
         </li>
       </ol>
       <p className="mt-6 text-lg font-medium">
