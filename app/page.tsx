@@ -14,7 +14,7 @@ export default function Home() {
   ];
 
   const filtered = lessons.filter(lesson =>
-    lesson.title.toLowerCase().includes(search.toLowerCase())
+    lesson.title.toLowerCase().includes(search.trim().toLowerCase())
   );
 
   return (
@@ -32,15 +32,19 @@ export default function Home() {
         className="w-full border rounded px-3 py-2 mb-4"
       />
 
-      <ul className="list-disc pl-5 space-y-2">
-        {filtered.map((lesson, idx) => (
-          <li key={idx}>
-            <Link href={lesson.href} className="text-blue-600 hover:underline">
-              {lesson.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {filtered.length > 0 ? (
+        <ul className="list-disc pl-5 space-y-2">
+          {filtered.map((lesson, idx) => (
+            <li key={idx}>
+              <Link href={lesson.href} className="text-blue-600 hover:underline">
+                {lesson.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-gray-500">No lessons found.</p>
+      )}
     </main>
   );
 }
