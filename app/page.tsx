@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import React from 'react';
+import LessonCard from '@/components/LessonCard';
 
 export default function Home() {
   const lessons = [
@@ -20,12 +19,7 @@ export default function Home() {
         <ul className="space-y-4">
           {lessons.map((lesson) => (
             <li key={lesson.slug}>
-              <Link
-                href={`/lessons/${lesson.slug}`}
-                className="block border border-gray-300 rounded p-4 hover:bg-blue-50"
-              >
-                <h2 className="text-xl font-semibold">{lesson.title}</h2>
-              </Link>
+              <LessonCard title={lesson.title} slug={lesson.slug} />
             </li>
           ))}
         </ul>
