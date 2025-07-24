@@ -2,11 +2,12 @@ import LessonCard from '../components/LessonCard';
 
 export default function Home() {
   const lessons = [
-    { slug: 'focus', title: '🧠 How to Focus Deeply' },
-    { slug: 'time', title: '⏳ Manage Your Time' },
-    { slug: 'calm', title: '✨ Stay Calm Under Pressure' },
-    { slug: 'habits', title: '📘 Build Strong Habits' },
-  ];
+  { slug: 'focus', title: '🧠 How to Focus Deeply' },
+  { slug: 'time', title: '⏳ Manage Your Time' },
+  { slug: 'calm', title: '✨ Stay Calm Under Pressure' },
+  { slug: 'habits', title: '📘 Build Strong Habits' },
+  { slug: 'think', title: '💡 Think for Yourself' },
+];
 
   return (
     <main className="flex justify-center px-4 pt-10">
