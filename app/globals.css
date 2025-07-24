@@ -1,15 +1,15 @@
-body {
-  font-family: sans-serif;
-  background: #f9f9f9;
-  padding: 2rem;
-  color: #222;
-}
+import Link from 'next/link';
 
-a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+export default function HomePage() {
+  return (
+    <main className="p-6 max-w-2xl mx-auto space-y-6">
+      <h1 className="text-3xl font-bold mb-4">📘 1-Page School Lessons</h1>
+      <ul className="space-y-2 text-lg text-blue-700">
+        <li><Link href="/lessons/focus" className="hover:underline">🧠 How to Focus Deeply</Link></li>
+        <li><Link href="/lessons/time" className="hover:underline">⏳ Manage Your Time</Link></li>
+        <li><Link href="/lessons/think" className="hover:underline">💡 Think for Yourself</Link></li>
+        <li><Link href="/lessons/calm" className="hover:underline">✨ How to Stay Calm Under Pressure</Link></li>
+      </ul>
+    </main>
+  );
 }
