@@ -1,30 +1,46 @@
-import LessonCard from '../components/LessonCard';
+// app/page.tsx
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
+  const [search, setSearch] = useState('');
   const lessons = [
-  { slug: 'focus', title: '🧠 How to Focus Deeply' },
-  { slug: 'time', title: '⏳ Manage Your Time' },
-  { slug: 'calm', title: '✨ Stay Calm Under Pressure' },
-  { slug: 'habits', title: '📘 Build Strong Habits' },
-  { slug: 'think', title: '💡 Think for Yourself' },
-];
+    { title: '🧠 How to Focus Deeply', href: '/lessons/focus' },
+    { title: '⏳ Manage Your Time', href: '/lessons/time' },
+    { title: '✨ How to Stay Calm Under Pressure', href: '/lessons/calm' },
+    { title: '📘 Build Strong Habits', href: '/lessons/habits' },
+    { title: '💡 Think for Yourself', href: '/lessons/think' },
+  ];
+
+  const filtered = lessons.filter(lesson =>
+    lesson.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <main className="flex justify-center px-4 pt-10">
-      <section className="w-full max-w-2xl space-y-8">
-        <div>
-          <h1 className="text-3xl font-bold mb-2">📘 1-Page School</h1>
-          <p className="text-gray-700">Life-changing lessons. Each one fits on a single page.</p>
-        </div>
+    <main className="max-w-2xl mx-auto p-6 space-y-6">
+      <h1 className="text-4xl font-bold mb-4">📚 1-Page School</h1>
+      <p className="text-lg text-gray-700 mb-4">
+        Practical, powerful lessons you can read in under a minute.
+      </p>
 
-        <ul className="space-y-4">
-          {lessons.map((lesson) => (
-            <li key={lesson.slug}>
-              <LessonCard title={lesson.title} slug={lesson.slug} />
-            </li>
-          ))}
-        </ul>
-      </section>
+      <input
+        type="text"
+        placeholder="Search lessons..."
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        className="w-full border rounded px-3 py-2 mb-4"
+      />
+
+      <ul className="list-disc pl-5 space-y-2">
+        {filtered.map((lesson, idx) => (
+          <li key={idx}>
+            <Link href={lesson.href} className="text-blue-600 hover:underline">
+              {lesson.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }
