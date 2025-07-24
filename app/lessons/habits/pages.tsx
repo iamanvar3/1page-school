@@ -1,22 +1,12 @@
-// app/lessons/habits.tsx
-
-export default function BuildHabits() {
+export default function BuildStrongHabits() {
   return (
-    <div className="prose max-w-2xl mx-auto py-10 px-4">
+    <main className="prose mx-auto px-4 py-10">
       <h1>📘 Build Strong Habits</h1>
-      <p>
-        Your habits shape your destiny. Start small, be consistent, and make good behaviors automatic.
-      </p>
+      <p>Want to change your life? Start small and stay consistent.</p>
       <ul>
-        <li><strong>Start tiny:</strong> Begin with something so small you can’t fail.</li>
-        <li><strong>Stick to a time:</strong> Tie it to a cue — like waking up or brushing your teeth.</li>
-        <li><strong>Track it:</strong> Use a paper or app to check off your habit daily.</li>
-        <li><strong>Don’t break the chain:</strong> If you miss one day, never miss two.</li>
-        <li><strong>Identity matters:</strong> Say “I’m the kind of person who...” and follow through.</li>
-      </ul>
-      <p>
-        Build one habit at a time. In months, your whole life can change.
-      </p>
-    </div>
-  );
-}
+        <li><strong>Pick One Tiny Habit:</strong> Choose a habit so small it feels effortless—like 1 push-up or 1 line of writing.</li>
+        <li><strong>Anchor It:</strong> Attach your new habit to something you already do (e.g., after brushing your teeth).</li>
+        <li><strong>Make It Easy:</strong> Prepare your environment to remove friction. Simplicity wins.</li>
+        <li><strong>Celebrate It:</strong> Smile, fist pump, or say “I’m becoming better!” after every success. Reinforce the habit.</li>
+        <li><strong>Track Progress:</strong> Use a simple calendar or app. Small streaks build big momentum.</li>
+        <li><strong>Be Forgiving:</strong> Missed a day? No guilt. Restart immediately. Consistency, not perfection.</li>
