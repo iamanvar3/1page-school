@@ -1,49 +1,34 @@
+// app/page.tsx
+
 import Link from 'next/link';
 
-export default function HomePage() {
+export default function Home() {
+  const lessons = [
+    { slug: 'focus', title: '🧠 How to Focus Deeply' },
+    { slug: 'time', title: '⏳ Manage Your Time' },
+    { slug: 'calm', title: '✨ Stay Calm Under Pressure' },
+    { slug: 'habits', title: '🔁 Build Strong Habits' },
+  ];
+
   return (
-    <main className="p-6 max-w-2xl mx-auto space-y-6">
-      <h1 className="text-4xl font-bold mb-2">📘 1-Page School</h1>
-      <p className="text-lg text-gray-700">
-        Life-changing lessons, written on a single page. No fluff. Just wisdom that works.
-      </p>
+    <section className="space-y-8">
+      <div>
+        <h1 className="text-3xl font-bold mb-2">📘 1-Page School</h1>
+        <p className="text-gray-700">Life-changing lessons. Each one fits on a single page.</p>
+      </div>
 
-      <section className="mt-8 space-y-4">
-        <h2 className="text-2xl font-semibold">📚 Lessons</h2>
-        <ul className="space-y-2">
-          <li>
-            <Link href="/lessons/focus" className="text-blue-600 hover:underline">
-              🧠 How to Focus Deeply
+      <ul className="space-y-4">
+        {lessons.map(lesson => (
+          <li key={lesson.slug}>
+            <Link
+              href={`/lessons/${lesson.slug}`}
+              className="block border border-gray-300 rounded p-4 hover:bg-blue-50"
+            >
+              <h2 className="text-xl font-semibold">{lesson.title}</h2>
             </Link>
           </li>
-          <li>
-            <Link href="/lessons/time" className="text-blue-600 hover:underline">
-              ⏳ Manage Your Time
-            </Link>
-          </li>
-          <li>
-            <Link href="/lessons/think" className="text-blue-600 hover:underline">
-              💡 Think for Yourself
-            </Link>
-          </li>
-          <li>
-            <Link href="/lessons/calm" className="text-blue-600 hover:underline">
-              ✨ How to Stay Calm Under Pressure
-            </Link>
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold">🌱 What is 1-Page School?</h2>
-        <p className="text-gray-700 mt-2">
-          1-Page School is a free, online library of powerful, practical wisdom —
-          each lesson distilled into one beautiful, readable page.
-        </p>
-        <p className="text-gray-700 mt-2">
-          No logins. No distractions. Just timeless ideas to help you grow.
-        </p>
-      </section>
-    </main>
+        ))}
+      </ul>
+    </section>
   );
 }
