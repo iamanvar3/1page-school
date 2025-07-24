@@ -1,6 +1,7 @@
 // app/page.tsx
 'use client';
 import { useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Home() {
@@ -18,33 +19,50 @@ export default function Home() {
   );
 
   return (
-    <main className="max-w-2xl mx-auto p-6 space-y-6">
-      <h1 className="text-4xl font-bold mb-4">📚 1-Page School</h1>
-      <p className="text-lg text-gray-700 mb-4">
-        Practical, powerful lessons you can read in under a minute.
-      </p>
+    <>
+      <Head>
+        <title>1-Page School | Life Lessons in Under a Minute</title>
+        <meta
+          name="description"
+          content="1-Page School offers quick, powerful life lessons you can read and apply in under 60 seconds. Learn about focus, calm, habits, and more."
+        />
+        <meta name="keywords" content="life lessons, focus, habits, time management, motivation, personal development" />
+        <meta name="author" content="1-Page School" />
+        <meta property="og:title" content="1-Page School" />
+        <meta property="og:description" content="Life-changing lessons in just one page. Learn fast, grow forever." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://1page-school.vercel.app" />
+        <meta property="og:image" content="https://1page-school.vercel.app/og-image.png" />
+      </Head>
 
-      <input
-        type="text"
-        placeholder="Search lessons..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-        className="w-full border rounded px-3 py-2 mb-4"
-      />
+      <main className="max-w-2xl mx-auto p-6 space-y-6">
+        <h1 className="text-4xl font-bold mb-4">📚 1-Page School</h1>
+        <p className="text-lg text-gray-700 mb-4">
+          Practical, powerful lessons you can read in under a minute.
+        </p>
 
-      {filtered.length > 0 ? (
-        <ul className="list-disc pl-5 space-y-2">
-          {filtered.map((lesson, idx) => (
-            <li key={idx}>
-              <Link href={lesson.href} className="text-blue-600 hover:underline">
-                {lesson.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-gray-500">No lessons found.</p>
-      )}
-    </main>
+        <input
+          type="text"
+          placeholder="Search lessons..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="w-full border rounded px-3 py-2 mb-4"
+        />
+
+        {filtered.length > 0 ? (
+          <ul className="list-disc pl-5 space-y-2">
+            {filtered.map((lesson, idx) => (
+              <li key={idx}>
+                <Link href={lesson.href} className="text-blue-600 hover:underline">
+                  {lesson.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-gray-500">No lessons found.</p>
+        )}
+      </main>
+    </>
   );
 }
