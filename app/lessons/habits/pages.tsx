@@ -10,3 +10,8 @@ export default function BuildStrongHabits() {
         <li><strong>Celebrate It:</strong> Smile, fist pump, or say “I’m becoming better!” after every success. Reinforce the habit.</li>
         <li><strong>Track Progress:</strong> Use a simple calendar or app. Small streaks build big momentum.</li>
         <li><strong>Be Forgiving:</strong> Missed a day? No guilt. Restart immediately. Consistency, not perfection.</li>
+      </ul>
+      <p>Great habits build great lives—start with one today.</p>
+    </main>
+  );
+}
