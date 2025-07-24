@@ -1,4 +1,4 @@
-import LessonCard from '@/components/LessonCard';
+import LessonCard from '../components/LessonCard';
 
 export default function Home() {
   const lessons = [
