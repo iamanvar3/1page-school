@@ -34,8 +34,6 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://1page-school.vercel.app" />
         <meta property="og:image" content="https://1page-school.vercel.app/og-image.png" />
-        <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="focus, time management, productivity, self-improvement, 1-minute lessons, habits, mental clarity" />
       </Head>
 
       <main className="max-w-2xl mx-auto p-6 space-y-6">
