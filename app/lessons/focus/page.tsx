@@ -30,10 +30,10 @@ export default function FocusLesson() {
       <p className="font-semibold text-blue-700">You don’t need more time. You need more focus. Train it daily.</p>
 
       <div className="mt-10 space-y-4">
-        <h2 className="text-xl font-semibold">🔎 Search Lessons</h2>
+        <h2 className="text-xl font-semibold">🔗 Related Lessons</h2>
         <input
           type="text"
-          placeholder="Type to filter lessons..."
+          placeholder="Search all lessons..."
           value={search}
           onChange={e => setSearch(e.target.value)}
           className="w-full border rounded px-3 py-2 mb-4"
