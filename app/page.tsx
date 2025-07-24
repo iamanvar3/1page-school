@@ -7,11 +7,11 @@ export default function Home() {
     { slug: 'focus', title: '🧠 How to Focus Deeply' },
     { slug: 'time', title: '⏳ Manage Your Time' },
     { slug: 'calm', title: '✨ Stay Calm Under Pressure' },
-    { slug: 'habits', title: '🔁 Build Strong Habits' },
+    { slug: 'habits', title: '📘 Build Strong Habits' },
   ];
 
   return (
-    <section className="space-y-8">
+    <section className="space-y-8 max-w-2xl mx-auto px-6 py-10">
       <div>
         <h1 className="text-3xl font-bold mb-2">📘 1-Page School</h1>
         <p className="text-gray-700">Life-changing lessons. Each one fits on a single page.</p>
