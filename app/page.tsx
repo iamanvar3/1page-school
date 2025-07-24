@@ -21,18 +21,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>1-Page School | Life Lessons in Under a Minute</title>
+        <title>1-Page School | Learn Life-Changing Lessons in Under a Minute</title>
         <meta
           name="description"
-          content="1-Page School offers quick, powerful life lessons you can read and apply in under 60 seconds. Learn about focus, calm, habits, and more."
+          content="1-Page School delivers powerful, practical lessons you can read in under a minute. Learn focus, habits, time management, and more."
         />
-        <meta name="keywords" content="life lessons, focus, habits, time management, motivation, personal development" />
-        <meta name="author" content="1-Page School" />
         <meta property="og:title" content="1-Page School" />
-        <meta property="og:description" content="Life-changing lessons in just one page. Learn fast, grow forever." />
+        <meta
+          property="og:description"
+          content="1-page life lessons you can read and apply instantly. Start learning today."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://1page-school.vercel.app" />
         <meta property="og:image" content="https://1page-school.vercel.app/og-image.png" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="focus, time management, productivity, self-improvement, 1-minute lessons, habits, mental clarity" />
       </Head>
 
       <main className="max-w-2xl mx-auto p-6 space-y-6">
