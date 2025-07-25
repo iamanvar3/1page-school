@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans bg-white text-gray-900`}>
         <Header />
-        <main className="max-w-2xl mx-auto p-4">{children}</main>
+        <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">{children}</main>
         <Footer />
       </body>
     </html>
