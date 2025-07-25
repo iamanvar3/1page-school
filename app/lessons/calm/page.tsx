@@ -1,32 +1,45 @@
-// app/lessons/calm/page.tsx
-import Link from 'next/link';
+// ✅ Correct: app/lessons/calm/page.tsx
 
-export default function CalmLesson() {import Link from 'next/link';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export default function CalmLesson() {
   return (
     <>
       <Breadcrumb />
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <main className="max-w-2xl mx-auto p-6 space-y-6">
         <h1 className="text-4xl font-bold mb-2">✨ How to Stay Calm Under Pressure</h1>
-        <p className="text-lg text-gray-700">Staying calm in chaos is a superpower. Train it like a skill:</p>
+        <p className="text-lg text-gray-700">Your peace is your power. Don’t let the world steal it.</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li>🫁 Breathe deeply: Slow, deep breaths trigger calm in your nervous system.</li>
-          <li>🧭 Zoom out: Ask “Will this matter in 1 year?” Perspective softens panic.</li>
-          <li>🧍 Pause before reacting: Buy a few seconds. Respond, don’t react.</li>
-          <li>📜 Use a calming phrase: “I can handle this.” Repeat it silently.</li>
-          <li>🛌 Rest and reset: Fatigue fuels stress. Prioritize good sleep and breaks.</li>
+          <li>🧘 Breathe deeply—slow exhales calm the nervous system.</li>
+          <li>⏸ Pause before reacting. Silence is strength.</li>
+          <li>🌿 Connect with nature or stillness. It clears the mind.</li>
+          <li>🧠 Focus on what you can control. Let go of what you can’t.</li>
+          <li>🤲 Surrender outcomes. Do your best, trust the rest.</li>
         </ul>
-        <p className="font-semibold text-blue-700">Calmness isn't Natur. It's practiced. Start today.</p>
-        <div className="mt-10 space-y-4">
-          <h2 className="text-xl font-semibold">🔗 Related Lessons</h2>
-          <ul className="list-disc pl-5 space-y-1">
-            <li><Link href="/lessons/focus" className="text-blue-600 hover:underline">🧠 How to Focus Deeply</Link></li>
-            <li><Link href="/lessons/habits" className="text-blue-600 hover:underline">📘 Build Strong Habits</Link></li>
-          </ul>
-          <p className="mt-4"><Link href="/" className="text-gray-600 hover:underline">← Back to Home</Link></p>
-        </div>
+
+        <h2 className="text-xl font-semibold mt-6">📚 Related Lessons</h2>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>
+            <Link href="/lessons/focus" className="text-blue-600 hover:underline">
+              🧠 How to Focus Deeply
+            </Link>
+          </li>
+          <li>
+            <Link href="/lessons/habits" className="text-blue-600 hover:underline">
+              📘 Build Strong Habits
+            </Link>
+          </li>
+          <li>
+            <Link href="/lessons/think" className="text-blue-600 hover:underline">
+              💡 Think for Yourself
+            </Link>
+          </li>
+        </ul>
+
+        <p className="mt-4">
+          <Link href="/" className="text-gray-600 hover:underline">← Back to Home</Link>
+        </p>
       </main>
     </>
   );
