@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 export default function TimeLesson() {
-  return (<Breadcrumb />
+  return (
+    <>
+      <Breadcrumb />
     <main className="max-w-2xl mx-auto p-6 space-y-6">
       <h1 className="text-4xl font-bold mb-2">⏳ Manage Your Time</h1>
       <p className="text-lg text-gray-700">Spend it on what truly matters.</p>
