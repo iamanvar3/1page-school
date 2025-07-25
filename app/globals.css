@@ -23,9 +23,16 @@ body {
 
 /* 🔗 Links */
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: underline;
+  color: #2563eb; /* Tailwind blue-600 */
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
+
+a:hover {
+  color: #1d4ed8; /* Tailwind blue-700 */
+}
+
 
 /* 📋 Lists */
 ul {
