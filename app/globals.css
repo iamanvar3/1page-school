@@ -1,5 +1,11 @@
 /* app/globals.css */
 
+/* 🔤 Enable font variable names for Tailwind */
+:root {
+  --font-inter: Inter;
+  --font-playfair: 'Playfair Display';
+}
+
 html {
   font-family: system-ui, sans-serif;
   scroll-behavior: smooth;
