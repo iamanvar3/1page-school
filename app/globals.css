@@ -1,33 +1,47 @@
 /* app/globals.css */
 
-/* 🔤 Enable font variable names for Tailwind */
+/* 🔤 Font variable names from next/font setup */
 :root {
-  --font-inter: Inter;
-  --font-playfair: 'Playfair Display';
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
 }
 
+/* 🌐 Base HTML Styles */
 html {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-inter);
   scroll-behavior: smooth;
 }
 
+/* 🖥️ Body */
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.75;
   background-color: #ffffff;
   color: #111827;
 }
 
+/* 🔗 Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* 📋 Lists */
 ul {
   padding-left: 1.25rem;
+  list-style-type: disc;
 }
 
+/* 📰 Headings: use Playfair Display for elegant headers */
+h1, h2, h3 {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 📱 Mobile Styles */
 @media (max-width: 640px) {
   main, header nav, footer {
     padding-left: 1rem;
@@ -35,7 +49,7 @@ ul {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   h2 {
