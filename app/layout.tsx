@@ -1,8 +1,8 @@
-// ✅ app/layout.tsx
+// app/layout.tsx
 import './globals.css';
 import { inter, playfair } from './fonts';
 import { ReactNode } from 'react';
-import LayoutWithBackground from '../components/LayoutWithBackground'; // ✅ import the client component
+import LayoutWithBackground from '@/components/LayoutWithBackground'; // ✅ Import from separate file
 
 export const metadata = {
   title: '1-Page School',
