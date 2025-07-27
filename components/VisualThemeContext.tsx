@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'default' | 'paper' | 'sunset' | 'midnight' | 'nature';
 
@@ -12,17 +12,17 @@ interface VisualThemeContextType {
 const VisualThemeContext = createContext<VisualThemeContextType | undefined>(undefined);
 
 export function VisualThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('default');
+  const [theme, setThemeState] = useState<Theme>('default');
 
-  // Optional: Persist theme in localStorage
   useEffect(() => {
-    const stored = localStorage.getItem('visual-theme') as Theme;
-    if (stored) setTheme(stored);
+    const stored = localStorage.getItem('visual-theme') as Theme | null;
+    if (stored) setThemeState(stored);
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('visual-theme', theme);
-  }, [theme]);
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
+    localStorage.setItem('visual-theme', newTheme);
+  };
 
   return (
     <VisualThemeContext.Provider value={{ theme, setTheme }}>
@@ -33,6 +33,8 @@ export function VisualThemeProvider({ children }: { children: React.ReactNode })
 
 export function useVisualTheme() {
   const context = useContext(VisualThemeContext);
-  if (!context) throw new Error('useVisualTheme must be used within a VisualThemeProvider');
+  if (!context) {
+    throw new Error('useVisualTheme must be used within a VisualThemeProvider');
+  }
   return context;
 }
