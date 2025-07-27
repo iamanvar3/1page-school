@@ -1,5 +1,4 @@
 import './globals.css';
-import { ThemeProvider } from '@/components/ThemeProvider'; // Optional, if you want to move dark mode logic
 import { VisualThemeProvider, useVisualTheme } from '@/components/VisualThemeContext';
 import Header from '@/components/Header';
 import type { Metadata } from 'next';
