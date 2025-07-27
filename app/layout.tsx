@@ -1,7 +1,6 @@
 import './globals.css';
 import Header from '@/components/Header';
-import { VisualThemeProvider } from '@/components/VisualThemeContext';
-import { useVisualTheme } from '@/components/VisualThemeContext';
+import { VisualThemeProvider, useVisualTheme } from '@/components/VisualThemeContext';
 import { Playfair_Display, Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 
