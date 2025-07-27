@@ -10,7 +10,7 @@ export default function Footer() {
         <Link href="/" className="text-blue-600 hover:underline">Lessons</Link>
       </p>
       <p>
-        Built with ❤️ by mrNORD •{' '}
+        Built with by mrNORD •{' '}
         <a
           href="https://github.com/meanvar3-5583"
           className="underline hover:text-black"
