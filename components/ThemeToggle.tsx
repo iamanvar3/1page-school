@@ -1,37 +1,29 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useVisualTheme } from './VisualThemeContext';
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+export default function VisualThemeToggle() {
+  const { theme, setTheme } = useVisualTheme();
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const isNowDark = !isDark;
-    setIsDark(isNowDark);
-
-    if (isNowDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
+  const options = [
+    { value: 'default', label: '🌀 Default' },
+    { value: 'paper', label: '📜 Paper' },
+    { value: 'sunset', label: '🌅 Sunset' },
+    { value: 'midnight', label: '🌌 Midnight' },
+    { value: 'nature', label: '🌿 Nature' },
+  ];
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="text-sm px-3 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white hover:opacity-80 transition"
+    <select
+      value={theme}
+      onChange={(e) => setTheme(e.target.value as any)}
+      className="bg-white dark:bg-slate-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-black dark:text-white"
     >
-      {isDark ? '☀️ Light' : '🌙 Dark'}
-    </button>
+      {options.map((opt) => (
+        <option key={opt.value} value={opt.value}>
+          {opt.label}
+        </option>
+      ))}
+    </select>
   );
 }
