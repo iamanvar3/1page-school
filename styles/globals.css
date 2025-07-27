@@ -1,14 +1,1 @@
-/* styles/globals.css */
 
-body {
-  @apply bg-white text-gray-800 leading-relaxed;
-  font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-a {
-  @apply text-blue-600 no-underline hover:underline;
-}
