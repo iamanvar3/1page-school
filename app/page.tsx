@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -19,7 +20,7 @@ export default function Home() {
   );
 
   return (
-    <>
+    <div className="homepage">
       <Head>
         <title>1-Page School | Learn Life-Changing Lessons in Under a Minute</title>
         <meta name="description" content="1-Page School delivers powerful, practical lessons you can read in under a minute. Learn focus, habits, time management, and more." />
@@ -67,6 +68,6 @@ export default function Home() {
           )}
         </section>
       </main>
-    </>
+    </div>
   );
 }
