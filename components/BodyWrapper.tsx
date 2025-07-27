@@ -20,13 +20,11 @@ export default function BodyWrapper({ children }: Props) {
   };
 
   return (
-    <body
-      className={`font-sans min-h-screen transition-colors duration-300 ${themeClasses[theme]}`}
-    >
+    <div className={`font-sans min-h-screen transition-colors duration-300 ${themeClasses[theme]}`}>
       <div className="max-w-3xl mx-auto px-4">
         <Header />
         <main className="mt-6">{children}</main>
       </div>
-    </body>
+    </div>
   );
 }
