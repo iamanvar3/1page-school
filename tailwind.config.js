@@ -1,17 +1,12 @@
-// tailwind.config.ts
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class', // Enables dark mode via CSS class
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
-
-export default config;
