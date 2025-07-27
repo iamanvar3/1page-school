@@ -20,11 +20,11 @@ export default function VisualThemeToggle() {
       <select
         value={theme}
         onChange={(e) => setTheme(e.target.value as any)}
-        className="w-40 px-2 py-2 text-sm rounded border border-gray-300 dark:border-gray-600
-                   focus:outline-none shadow-sm transition-colors duration-200"
+        className="w-40 px-2 py-2 text-sm rounded border border-gray-300 dark:border-gray-600 focus:outline-none shadow-sm"
         style={{
           backgroundColor: isMidnight ? '#1f2937' : '#ffffff', // slate-800 or white
           color: isMidnight ? '#ffffff' : '#000000',
+          WebkitTextFillColor: isMidnight ? '#ffffff' : '#000000', // Safari fallback
         }}
       >
         {options.map((opt) => (
