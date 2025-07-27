@@ -1,4 +1,3 @@
-// ✅ app/layout.tsx
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -13,7 +12,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  // 🧠 This must be moved to a client wrapper due to usePathname()
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -31,14 +29,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   );
 }
 
-// ✅ This wrapper handles page-specific backgrounds
+// ✅ Client wrapper for dynamic backgrounds
 function LayoutWithBackground({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const isLesson = pathname.startsWith('/lessons/');
 
-  const backgroundClass = isHome
-    ? 'bg-gradient-to-b from-blue-50 to-white dark:from-gray-950 dark:to-gray-900'
-    : 'bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-950';
+  let backgroundClass = '';
+
+  if (isHome) {
+    backgroundClass =
+      'bg-gradient-to-b from-blue-50 to-white dark:from-gray-950 dark:to-gray-900';
+  } else if (isLesson) {
+    backgroundClass =
+      'bg-[radial-gradient(ellipse_at_top_left,_#fdf6e3,_#ffffff)] dark:bg-[radial-gradient(ellipse_at_top_left,_#1a1a1a,_#0f0f0f)]';
+  } else {
+    backgroundClass =
+      'bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-950';
+  }
 
   return (
     <div className={`${backgroundClass} text-gray-900 dark:text-gray-100 min-h-screen`}>
