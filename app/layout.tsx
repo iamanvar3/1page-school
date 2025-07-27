@@ -1,8 +1,8 @@
 import './globals.css';
-import { VisualThemeProvider, useVisualTheme } from '@/components/VisualThemeContext';
 import Header from '@/components/Header';
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
+import { VisualThemeProvider, useVisualTheme } from '@/components/VisualThemeContext';
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: '400', variable: '--font-playfair' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
