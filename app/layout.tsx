@@ -1,8 +1,10 @@
-// app/layout.tsx
 import './globals.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ThemeToggle from '@/components/ThemeToggle';
 import { inter, playfair } from './fonts';
 import { ReactNode } from 'react';
-import LayoutWithBackground from '@/components/LayoutWithBackground'; // ✅ Import from separate file
+import { VisualThemeProvider } from '@/components/VisualThemeContext';
 
 export const metadata = {
   title: '1-Page School',
@@ -19,7 +21,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <LayoutWithBackground>{children}</LayoutWithBackground>
+        <VisualThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </VisualThemeProvider>
       </body>
     </html>
   );
