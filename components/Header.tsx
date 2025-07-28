@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useVisualTheme } from './VisualThemeContext';
 
 const themes = [
-  { value: 'default', label: 'Default' },
+  { value: 'image', label: 'Default' },
   { value: 'paper', label: 'Paper' },
   { value: 'sunset', label: 'Sunset' },
   { value: 'midnight', label: 'Midnight' },

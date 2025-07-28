@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'default' | 'paper' | 'sunset' | 'midnight' | 'nature';
+type Theme = 'image' | 'default' | 'paper' | 'sunset' | 'midnight' | 'nature';
 
 interface VisualThemeContextType {
   theme: Theme;
@@ -12,7 +12,7 @@ interface VisualThemeContextType {
 const VisualThemeContext = createContext<VisualThemeContextType | undefined>(undefined);
 
 export function VisualThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('default');
+  const [theme, setThemeState] = useState<Theme>('image');
   const [hydrated, setHydrated] = useState(false); // 🚨 To avoid mismatch between SSR & client
 
   useEffect(() => {
