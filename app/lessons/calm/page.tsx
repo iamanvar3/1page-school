@@ -7,7 +7,7 @@ export default function CalmLesson() {
   return (
     <>
       <Breadcrumb />
-      <main className="max-w-2xl mx-auto p-6 space-y-6">
+      <main className="max-w-2xl mx-auto p-6 space-y-6 bg-white/70 dark:bg-gray-900/70 text-black dark:text-white rounded-2xl shadow-lg backdrop-blur-sm">
         <h1 className="text-4xl font-bold mb-2">✨ How to Stay Calm Under Pressure</h1>
         <p className="text-lg text-gray-700">Your peace is your power. Don’t let the world steal it.</p>
         <ul className="list-disc pl-5 space-y-2">
