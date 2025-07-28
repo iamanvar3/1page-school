@@ -35,18 +35,14 @@ export const metadata: Metadata = {
     title: '1-Page School – Learn Smarter',
     description: 'Fast, powerful one-page lessons to help you learn anything better.',
     images: ['/preview-image.png'],
-    creator: '@YourTwitterHandle', // Optional: replace with your handle or remove
+    creator: '@YourTwitterHandle', // Optional: replace or remove
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${playfair.variable} ${inter.variable}`}
-    >
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`light ${playfair.variable} ${inter.variable}`}>
         <VisualThemeProvider>
           <BodyWrapper>{children}</BodyWrapper>
         </VisualThemeProvider>
