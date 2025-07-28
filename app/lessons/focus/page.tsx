@@ -19,7 +19,7 @@ export default function FocusLesson() {
   return (
     <>
       <Breadcrumb />
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 bg-white/70 dark:bg-gray-900/70 text-black dark:text-white rounded-2xl shadow-lg backdrop-blur-sm">
         <h1 className="text-4xl font-bold mb-2">🧠 How to Focus Deeply</h1>
         <p className="text-lg text-gray-700">Deep focus leads to deep work. Here's how to sharpen yours:</p>
         <ul className="list-disc pl-5 space-y-2">

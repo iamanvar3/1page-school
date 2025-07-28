@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/1page-school/app/error.tsx"],"sourcesContent":["\"use client\";\r\n\r\nexport default function Error({ error, reset }: { error: Error; reset: () => void }) {\r\n  return (\r\n    <div className=\"min-h-screen flex flex-col items-center justify-center text-center p-8 bg-white/80 dark:bg-gray-900/80\">\r\n      <h2 className=\"text-2xl font-bold mb-4 text-red-700 dark:text-red-400\">Something went wrong!</h2>\r\n      <p className=\"mb-4 text-gray-700 dark:text-gray-300 max-w-xl\">{error.message}</p>\r\n      <button\r\n        className=\"px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700\"\r\n        onClick={() => reset()}\r\n      >\r\n        Try again\r\n      </button>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAEe,SAAS,MAAM,KAAqD;QAArD,EAAE,KAAK,EAAE,KAAK,EAAuC,GAArD;IAC5B,qBACE,6LAAC;QAAI,WAAU;;0BACb,6LAAC;gBAAG,WAAU;0BAAyD;;;;;;0BACvE,6LAAC;gBAAE,WAAU;0BAAkD,MAAM,OAAO;;;;;;0BAC5E,6LAAC;gBACC,WAAU;gBACV,SAAS,IAAM;0BAChB;;;;;;;;;;;;AAKP;KAbwB","debugId":null}}]
+}

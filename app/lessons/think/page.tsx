@@ -7,7 +7,7 @@ export default function ThinkLesson() {
   return (
     <>
       <Breadcrumb />
-      <main className="max-w-2xl mx-auto p-6 space-y-6">
+      <main className="max-w-2xl mx-auto p-6 space-y-6 bg-white/70 dark:bg-gray-900/70 text-black dark:text-white rounded-2xl shadow-lg backdrop-blur-sm">
         <h1 className="text-4xl font-bold mb-2">💡 Think for Yourself</h1>
         <p className="text-lg text-gray-700">
           Independent thinking is your mind’s shield in a noisy world.
