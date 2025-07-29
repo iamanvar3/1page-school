@@ -8,7 +8,6 @@ import type { Theme } from './VisualThemeContext';
 
 const options = [
   { value: 'default', label: '🌀 Default' },
-  { value: 'image', label: '🖼️ Picture' },
   { value: 'sunset', label: '🌅 Sunset' },
   { value: 'nature', label: '🌿 Nature' },
   { value: 'dark', label: '🌑 Dark' },
