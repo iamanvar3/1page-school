@@ -11,6 +11,7 @@ const options = [
   { value: 'paper', label: '📄 Paper' },
   { value: 'sunset', label: '🌅 Sunset' },
   { value: 'nature', label: '🌿 Nature' },
+  { value: 'image', label: <span>🎨 <span style={{verticalAlign:'middle'}}>Lottie</span></span> },
 ];
 
 export default function VisualThemeToggle() {

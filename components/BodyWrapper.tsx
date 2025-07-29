@@ -16,6 +16,7 @@ export default function BodyWrapper({ children }: Props) {
     paper: 'bg-gray-800 text-white',
     sunset: 'bg-gradient-to-br from-pink-200/80 via-orange-100/80 to-yellow-50/80 text-gray-900',
     nature: 'bg-green-50/80 text-green-900',
+    image: 'text-white',
   };
 
   return (
@@ -33,6 +34,12 @@ export default function BodyWrapper({ children }: Props) {
           : {}
       }
     >
+      {/* ...existing children rendering code... */}
+      {theme === 'image' && (
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Lottie animation background can be added here if desired */}
+        </div>
+      )}
       <div className="max-w-3xl mx-auto px-4">
         <Header />
         <main className="mt-6">{children}</main>
