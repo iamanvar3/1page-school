@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import { useVisualTheme } from './VisualThemeContext';
+import type { Theme } from './VisualThemeContext';
 
 const options = [
   { value: 'default', label: '🌀 Default' },
