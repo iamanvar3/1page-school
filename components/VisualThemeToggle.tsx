@@ -5,7 +5,8 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import { useVisualTheme } from './VisualThemeContext';
 
-const options = [
+import type { Theme } from './VisualThemeContext';
+const options: { value: Theme; label: string }[] = [
   { value: 'default', label: '🌀 Default' },
   { value: 'paper', label: '📜 Paper' },
   { value: 'sunset', label: '🌅 Sunset' },
@@ -19,7 +20,7 @@ export default function VisualThemeToggle() {
 
   return (
     <div className="w-52">
-      <Listbox value={selected} onChange={(opt) => setTheme(opt.value)}>
+      <Listbox value={selected} onChange={(opt) => setTheme(opt.value as Theme)}>
         <div className="relative">
           <Listbox.Button
             className="relative w-full cursor-pointer rounded-lg bg-white dark:bg-gray-800 py-2 pl-3 pr-10 text-left shadow-md text-sm border dark:border-gray-600 border-gray-300 focus:outline-none"
