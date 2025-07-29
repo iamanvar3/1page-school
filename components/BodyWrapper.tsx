@@ -13,6 +13,7 @@ export default function BodyWrapper({ children }: Props) {
 
   const themeClasses = {
     dark: 'text-white bg-gray-900/90',
+    paper: 'bg-gray-800 text-white',
     sunset: 'bg-gradient-to-br from-pink-200/80 via-orange-100/80 to-yellow-50/80 text-gray-900',
     nature: 'bg-green-50/80 text-green-900',
   };
