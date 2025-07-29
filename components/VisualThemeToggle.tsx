@@ -7,10 +7,9 @@ import { useVisualTheme } from './VisualThemeContext';
 import type { Theme } from './VisualThemeContext';
 
 const options = [
-  { value: 'default', label: '🌀 Default' },
+  { value: 'dark', label: '� Dark' },
   { value: 'sunset', label: '🌅 Sunset' },
   { value: 'nature', label: '🌿 Nature' },
-  { value: 'dark', label: '🌑 Dark' },
 ];
 
 export default function VisualThemeToggle() {
