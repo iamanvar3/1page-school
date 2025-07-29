@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ThemeToggle from './ThemeToggle';
 
 export default function LayoutWithBackground({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -29,7 +28,7 @@ export default function LayoutWithBackground({ children }: { children: ReactNode
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="flex justify-between items-center py-4">
           <h1 className="text-2xl font-playfair">1-Page School</h1>
-          <ThemeToggle />
+          {/* ThemeToggle removed: unified theme system in Header/VisualThemeToggle */}
         </header>
         <Header />
         <main className="py-8">{children}</main>
