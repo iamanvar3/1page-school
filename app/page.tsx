@@ -12,6 +12,11 @@ const allLessons = [
   { title: '✨ How to Stay Calm Under Pressure', href: '/lessons/calm', summary: 'Practical tools to keep your mind clear in chaos.' },
   { title: '📘 Build Strong Habits', href: '/lessons/habits', summary: 'Create routines that stick and fuel long-term growth.' },
   { title: '💡 Think for Yourself', href: '/lessons/think', summary: 'Sharpen your critical thinking and question the norm.' },
+  { title: '💳 How to Manage Your Debt', href: '/lessons/debt', summary: 'Simple steps to get out of debt and stay debt-free.' },
+  { title: '💍 How to Manage Your Marriage & Relationships', href: '/lessons/marriage', summary: 'Keys to a strong, happy partnership.' },
+  { title: '💪 How to Build Confidence', href: '/lessons/confidence', summary: 'Practical ways to boost your self-esteem.' },
+  { title: '🧘 How to Regulate Your Emotions', href: '/lessons/regulation', summary: 'Simple tools for emotional control and resilience.' },
+  { title: '🍽️ How to Master Table Manners', href: '/lessons/table-manners', summary: 'Essential etiquette for any meal.' },
 ];
 
 export default function Home() {
