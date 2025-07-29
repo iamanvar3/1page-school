@@ -5,13 +5,11 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import { useVisualTheme } from './VisualThemeContext';
 
-import type { Theme } from './VisualThemeContext';
-const options: { value: Theme; label: string }[] = [
+const options = [
   { value: 'default', label: '🌀 Default' },
-  { value: 'dark', label: '🌑 Dark' },
   { value: 'sunset', label: '🌅 Sunset' },
-  { value: 'midnight', label: '🌌 Midnight' },
-  { value: 'nature', label: '🌿 Nature' },
+  { value: 'nature', label: '� Nature' },
+  { value: 'dark', label: '� Dark' },
 ];
 
 export default function VisualThemeToggle() {
