@@ -7,7 +7,6 @@ import { useVisualTheme } from './VisualThemeContext';
 import type { Theme } from './VisualThemeContext';
 
 const options = [
-  { value: 'dark', label: '🌑 Dark' },
   { value: 'paper', label: '📄 Paper' },
   { value: 'sunset', label: '🌅 Sunset' },
   { value: 'nature', label: '🌿 Nature' },
