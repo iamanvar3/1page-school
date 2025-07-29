@@ -8,7 +8,6 @@ const themes = [
   { value: 'image', label: 'Default' },
   { value: 'paper', label: 'Paper' },
   { value: 'sunset', label: 'Sunset' },
-  { value: 'midnight', label: 'Midnight' },
   { value: 'nature', label: 'Nature' },
 ];
 
