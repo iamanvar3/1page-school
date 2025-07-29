@@ -8,7 +8,7 @@ import { useVisualTheme } from './VisualThemeContext';
 import type { Theme } from './VisualThemeContext';
 const options: { value: Theme; label: string }[] = [
   { value: 'default', label: '🌀 Default' },
-  { value: 'paper', label: '📜 Paper' },
+  { value: 'dark', label: '🌑 Dark' },
   { value: 'sunset', label: '🌅 Sunset' },
   { value: 'midnight', label: '🌌 Midnight' },
   { value: 'nature', label: '🌿 Nature' },

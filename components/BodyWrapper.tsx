@@ -14,7 +14,7 @@ export default function BodyWrapper({ children }: Props) {
   const themeClasses = {
     image: 'text-white',
     default: 'bg-white/80 text-black dark:bg-black/80 dark:text-white',
-    paper: 'bg-yellow-50/80 text-gray-900',
+    dark: 'bg-gray-900/90 text-white',
     sunset: 'bg-gradient-to-br from-pink-200/80 via-orange-100/80 to-yellow-50/80 text-gray-900',
     midnight: 'bg-gradient-to-br from-gray-900/80 via-slate-800/80 to-black/80 text-white',
     nature: 'bg-green-50/80 text-green-900',

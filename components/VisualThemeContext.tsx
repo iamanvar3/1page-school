@@ -3,7 +3,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
-export type Theme = 'default' | 'paper' | 'sunset' | 'midnight' | 'nature' | 'image';
+export type Theme = 'default' | 'dark' | 'sunset' | 'midnight' | 'nature' | 'image';
 
 interface VisualThemeContextType {
   theme: Theme;
