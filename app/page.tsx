@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Lottie from 'lottie-react';
@@ -12,11 +12,11 @@ const allLessons = [
   { title: '✨ How to Stay Calm Under Pressure', href: '/lessons/calm', summary: 'Practical tools to keep your mind clear in chaos.' },
   { title: '📘 Build Strong Habits', href: '/lessons/habits', summary: 'Create routines that stick and fuel long-term growth.' },
   { title: '💡 Think for Yourself', href: '/lessons/think', summary: 'Sharpen your critical thinking and question the norm.' },
-  { title: '💳 How to Manage Your Debt', href: '/lessons/debt', summary: 'Simple steps to get out of debt and stay debt-free.' },
-  { title: '💍 How to Manage Your Marriage & Relationships', href: '/lessons/marriage', summary: 'Keys to a strong, happy partnership.' },
-  { title: '💪 How to Build Confidence', href: '/lessons/confidence', summary: 'Practical ways to boost your self-esteem.' },
-  { title: '🧘 How to Regulate Your Emotions', href: '/lessons/regulation', summary: 'Simple tools for emotional control and resilience.' },
-  { title: '🍽️ How to Master Table Manners', href: '/lessons/table-manners', summary: 'Essential etiquette for any meal.' },
+  {
+    title: '🧬 Life Skills',
+    href: '/life-skills',
+    summary: 'Master confidence, relationships, emotional control, and more.',
+  },
 ];
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         <section className="rounded-3xl p-10 text-center text-white shadow-xl relative overflow-hidden backdrop-blur-xl bg-white/10 dark:bg-gray-900/30 border border-white/20 dark:border-gray-800/40">
           {/* Animated gradient overlay */}
-          <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-blue-700 via-purple-500 to-blue-400 opacity-70" style={{backgroundSize:'200% 200%', animation:'gradientBG 8s ease-in-out infinite'}} />
+          <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-blue-700 via-purple-500 to-blue-400 opacity-70" style={{ backgroundSize: '200% 200%', animation: 'gradientBG 8s ease-in-out infinite' }} />
           {/* Globe SVG overlay */}
           <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Globe_icon.svg')] bg-center bg-no-repeat bg-contain z-10" />
 
