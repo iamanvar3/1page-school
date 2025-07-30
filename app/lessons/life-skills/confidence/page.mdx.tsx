@@ -1,7 +1,7 @@
-import MDXLayout from '@/components/MDXLayout';
-
-const LayoutWrapper = ({ children }) => <MDXLayout>{children}</MDXLayout>;
-export default LayoutWrapper;
+---
+title: "💪 How to Build Confidence"
+summary: "🚀 Practical ways to boost your self-esteem."
+---
 
 # 💪 How to Build Confidence
 
@@ -11,4 +11,4 @@ export default LayoutWrapper;
 - 🧠 Practice positive self-talk; challenge negative thoughts.  
 - 😄 Stand tall, make eye contact, and smile.  
 - 📚 Learn new skills—competence builds confidence.  
-- 🫂 Surround yourself with supportive people.
+- 🫂 Surround yourself with supportive people.  
