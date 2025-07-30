@@ -1,4 +1,3 @@
-
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -13,7 +12,7 @@ interface VisualThemeContextType {
 const VisualThemeContext = createContext<VisualThemeContextType | undefined>(undefined);
 
 export function VisualThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('default');
+  const [theme, setThemeState] = useState<Theme>('sunset'); // 🟡 CHANGED from 'default' to 'sunset'
   const [hydrated, setHydrated] = useState(false); // 🚨 To avoid mismatch between SSR & client
 
   useEffect(() => {

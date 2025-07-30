@@ -14,7 +14,7 @@ const allLessons = [
   { title: '💡 Think for Yourself', href: '/lessons/think', summary: 'Sharpen your critical thinking and question the norm.' },
   {
     title: '🧬 Life Skills',
-    href: '/life-skills',
+    href: '/lessons/life-skills',
     summary: 'Master confidence, relationships, emotional control, and more.',
   },
 ];
@@ -34,22 +34,28 @@ export default function Home() {
       </Head>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-        <section className="rounded-3xl p-10 text-center text-white shadow-xl relative overflow-hidden backdrop-blur-xl bg-white/10 dark:bg-gray-900/30 border border-white/20 dark:border-gray-800/40">
+        <section className="rounded-3xl p-10 text-white shadow-xl relative overflow-hidden backdrop-blur-xl bg-white/10 dark:bg-gray-900/30 border border-white/20 dark:border-gray-800/40">
           {/* Animated gradient overlay */}
-          <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-blue-700 via-purple-500 to-blue-400 opacity-70" style={{ backgroundSize: '200% 200%', animation: 'gradientBG 8s ease-in-out infinite' }} />
+          <div
+            className="absolute inset-0 z-0 animate-gradient bg-gradient-to-br from-blue-700 via-purple-500 to-blue-400 opacity-70"
+            style={{ backgroundSize: '200% 200%', animation: 'gradientBG 8s ease-in-out infinite' }}
+          />
           {/* Globe SVG overlay */}
           <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Globe_icon.svg')] bg-center bg-no-repeat bg-contain z-10" />
 
-          <Lottie animationData={animationData} loop={true} className="w-48 h-48 mx-auto mb-4 z-20 relative" />
-
-          <h1 className="text-5xl sm:text-6xl font-playfair font-bold z-20 relative mb-4 drop-shadow-lg">
-            🌍 OneLife
-          </h1>
-          <p className="text-lg sm:text-xl font-medium z-20 relative drop-shadow">
-            <strong>OneLife</strong> is a website to understand what life is truly about.<br />
-            We believe this book can help change someone’s life.<br />
-            That’s why we created the <strong>1-Page Book</strong> — a simple guide with timeless lessons to help you live wisely.
-          </p>
+          <div className="relative z-20 max-w-3xl mx-auto text-center">
+            <Lottie animationData={animationData} loop={true} className="w-48 h-48 mx-auto mb-4" />
+            <article className="prose dark:prose-invert prose-blue mx-auto">
+              <h1 className="text-5xl sm:text-6xl font-playfair font-bold mb-4 drop-shadow-lg">
+                🌍 OneLife
+              </h1>
+              <p className="text-lg sm:text-xl font-medium drop-shadow">
+                <strong>OneLife</strong> is a website to understand what life is truly about.<br />
+                We believe this book can help change someone’s life.<br />
+                That’s why we created the <strong>1-Page Book</strong> — a simple guide with timeless lessons to help you live wisely.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section>

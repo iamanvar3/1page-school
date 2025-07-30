@@ -1,15 +1,14 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 🔤 Font variable names from next/font setup */
+/* 🔤 Font variables from next/font setup */
 :root {
   --font-inter: 'Inter', sans-serif;
   --font-playfair: 'Playfair Display', serif;
 }
 
-/* 🌐 Base HTML Styles */
+/* 🌐 Base Styles */
 html {
   font-family: var(--font-inter);
   scroll-behavior: smooth;
@@ -18,26 +17,38 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.75;
+  font-size: 1.05rem;
+  line-height: 1.8;
   background-color: #ffffff;
   color: #111827;
 }
 
-/* 🎨 Page Background Variants */
+/* 🔲 Page Backgrounds */
 .home-bg {
-  background: linear-gradient(to right, #f0f4f8, #e2e8f0); /* light bluish gradient */
+  background: linear-gradient(to right, #f0f4f8, #e2e8f0);
 }
-
-.lesson-bg {
-  background: #fffbe6; /* soft warm tone for focused reading */
-}
-
 .dark .home-bg {
   background: linear-gradient(to right, #1e293b, #0f172a);
 }
 
+/* 🎨 Lesson Background */
+.lesson-bg {
+  background: #fffbe6;
+  color: #111827;
+  position: relative;
+}
+.lesson-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.5;
+  filter: blur(12px);
+  z-index: 0;
+}
 .dark .lesson-bg {
   background: #1c1c1c;
+  color: #f1f5f9;
 }
 
 /* 🔗 Links */
@@ -47,9 +58,14 @@ a {
   font-weight: 500;
   transition: color 0.2s ease;
 }
-
 a:hover {
   color: #1d4ed8;
+}
+.dark a {
+  color: #60a5fa;
+}
+.dark a:hover {
+  color: #3b82f6;
 }
 
 /* 📰 Headings */
@@ -66,33 +82,108 @@ ul {
   list-style-type: disc;
 }
 
-/* 📱 Mobile Styles */
+/* 🆕 Typography */
+article.prose {
+  max-width: 65ch;
+  padding: 1.5rem 1rem;
+}
+
+/* 🆕 Code styling */
+code {
+  background-color: #fef2f2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+.dark code {
+  background-color: #1e293b;
+}
+
+/* ✅ Lesson content box */
+.lesson-bg article.prose {
+  background: #fffdfa;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  color: #111827;
+  position: relative;
+  z-index: 10;
+}
+.dark .lesson-bg article.prose {
+  background: #111;
+  color: #f1f5f9;
+}
+
+/* 📱 Mobile styles */
 @media (max-width: 640px) {
-  main,
-  header nav,
-  footer {
+  main, header nav, footer {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
 }
 
-/* 🌙 Dark Mode */
+/* 🌙 Dark mode body */
 .dark body {
   color: #f1f5f9;
 }
 
-.dark a {
-  color: #60a5fa;
+/* 🎨 THEME VARIANTS */
+
+/* DEFAULT (image background) */
+.default .lesson-bg {
+  background: url('/bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: #111;
 }
 
-.dark a:hover {
-  color: #3b82f6;
+/* PAPER */
+.paper .lesson-bg {
+  background: #fbf9f4;
+  color: #111;
+}
+
+/* SUNSET */
+.sunset .lesson-bg {
+  background: linear-gradient(to bottom, #fcd34d, #f87171);
+  color: #111;
+}
+
+/* NATURE */
+.nature .lesson-bg {
+  background: linear-gradient(to bottom, #d1fae5, #a7f3d0);
+  color: #111;
+}
+
+/* DARK versions */
+.dark .default .lesson-bg,
+.dark .paper .lesson-bg,
+.dark .sunset .lesson-bg,
+.dark .nature .lesson-bg {
+  background: #1c1c1c;
+  color: #f1f5f9;
+}
+
+.dark .default .lesson-bg article.prose,
+.dark .paper .lesson-bg article.prose,
+.dark .sunset .lesson-bg article.prose,
+.dark .nature .lesson-bg article.prose {
+  background: #111;
+  color: #f1f5f9;
+}
+
+/* Text fix for all themes */
+.default .lesson-bg *,
+.paper .lesson-bg *,
+.sunset .lesson-bg *,
+.nature .lesson-bg * {
+  color: #111827 !important;
+}
+
+.dark .default .lesson-bg *,
+.dark .paper .lesson-bg *,
+.dark .sunset .lesson-bg *,
+.dark .nature .lesson-bg * {
+  color: #f1f5f9 !important;
 }

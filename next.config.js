@@ -6,8 +6,8 @@ const withMDX = require('@next/mdx')({
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
   experimental: {
-    mdxRs: true, // Required for MDX in app/ directory in some Next.js versions
-    serverActions: true,
+    mdxRs: true,
+    serverActions: {}, // ✅ Fixed: now it's an object
   },
 };
 
